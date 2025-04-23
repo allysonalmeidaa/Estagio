@@ -1,0 +1,23 @@
+from playwright.sync_api import sync_playwright
+
+# Substitua as credenciais por variáveis de ambiente ou outro método seguro
+USERNAME = "allyson.sirvano"
+PASSWORD = "Gisele2002@"
+
+with sync_playwright() as p:
+    navegador = p.chromium.launch(headless=False)
+    pagina = navegador.new_page()
+    pagina.goto("https://midas.unioeste.br/login/#/")
+    
+    # Preenche os campos de login
+    pagina.fill('xpath=//*[@id="login-username"]', USERNAME)
+    pagina.fill('xpath=//*[@id="login-password"]', PASSWORD)
+    
+       
+    # Aguarda o botão de login e clica
+    pagina.wait_for_selector('xpath=/html/body/div[2]/div/div[2]/div/div[2]/form/div[3]/button', timeout=5000)
+    pagina.locator('xpath=/html/body/div[2]/div/div[2]/div/div[2]/form/div[3]/button').click()
+    
+    pagina.locator('xpath=/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/a[1]').click()
+    # Aguarda um tempo adicional, se necessário
+    pagina.wait_for_timeout(5000)
