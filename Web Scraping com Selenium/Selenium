@@ -2,6 +2,7 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+import os
 
 # Configuração do WebDriver
 service = Service()  
@@ -41,10 +42,14 @@ df = pd.DataFrame({
     'Quantidade em Estoque': estoquelista
 })
 
-# Exporta o DataFrame para um arquivo Excel
-df.to_excel('livros_estoque.xlsx', index=False)
+# Obtém o diretório atual do script e cria o caminho do arquivo
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+caminho_excel = os.path.join(diretorio_atual, 'livros_estoque.xlsx')
 
-print("Arquivo Excel 'livros_estoque.xlsx' criado com sucesso!")
+# Exporta o DataFrame para um arquivo Excel
+df.to_excel(caminho_excel, index=False)
+
+print(f"Arquivo Excel criado com sucesso em: {caminho_excel}")
 
 # Fecha o navegador
 driver.quit()
