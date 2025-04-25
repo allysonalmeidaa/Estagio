@@ -1,0 +1,108 @@
+from playwright.sync_api import sync_playwright
+import pandas as pd
+import os
+import time
+
+def extrair_dados_livros():
+    playwright = None
+    browser = None
+    
+    try:
+        print("\nIniciando extração de dados...")
+        playwright = sync_playwright().start()
+        
+        # Inicia o navegador com tempo de espera maior
+        browser = playwright.chromium.launch(headless=False)
+        context = browser.new_context()
+        page = context.new_page()
+        page.set_default_timeout(30000)  # 30 segundos de timeout
+        
+        # Acessa o site
+        page.goto('https://books.toscrape.com/')
+        
+        # Espera os cards dos livros carregarem
+        page.wait_for_selector('.product_pod')
+        
+        dados = []
+        
+        # Pega todos os links dos livros primeiro
+        livros_links = page.eval_on_selector_all('.product_pod h3 a', """
+            (elements) => elements.map(element => ({
+                title: element.getAttribute('title'),
+                href: element.href
+            }))
+        """)
+        
+        # Para cada livro
+        for livro_info in livros_links:
+            try:
+                # Vai para a página do livro
+                page.goto(livro_info['href'])
+                page.wait_for_selector('.price_color')
+                page.wait_for_selector('.instock')
+                
+                # Extrai preço e quantidade
+                preco = float(page.query_selector('.price_color').inner_text().replace('£', ''))
+                texto_estoque = page.query_selector('.instock').inner_text()
+                quantidade = int(texto_estoque.replace('In stock (', '').replace(' available)', ''))
+                
+                dados.append({
+                    'Título': livro_info['title'],
+                    'Preço (£)': preco,
+                    'Quantidade': quantidade
+                })
+                
+                # Volta para a página principal
+                page.goto('https://books.toscrape.com/')
+                page.wait_for_selector('.product_pod')
+                
+            except Exception as e:
+                print(f"Erro ao processar livro {livro_info['title']}: {str(e)}")
+                continue
+        
+        return pd.DataFrame(dados).sort_values(by='Preço (£)')
+        
+    finally:
+        if browser:
+            browser.close()
+        if playwright:
+            playwright.stop()
+
+def mostrar_resumo(df, arquivo):
+    # Limpa o terminal
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    # Mostra os 5 primeiros livros de forma organizada
+    print("\n=== PRIMEIROS 5 LIVROS ENCONTRADOS ===")
+    print("\n{:<60} {:>10} {:>12}".format("TÍTULO", "PREÇO (£)", "QUANTIDADE"))
+    print("-" * 84)
+    
+    for _, livro in df.head().iterrows():
+        titulo = livro['Título'][:57] + "..." if len(livro['Título']) > 57 else livro['Título']
+        print("{:<60} £{:>9.2f} {:>12}".format(
+            titulo,
+            livro['Preço (£)'],
+            livro['Quantidade']
+        ))
+    
+    print("\n" + "=" * 84)
+    print("\nESTATÍSTICAS:")
+    print(f"Total de livros cadastrados: {len(df)}")
+    print(f"Total de livros em estoque: {df['Quantidade'].sum()}")
+    print(f"\nDados salvos em: {arquivo}")
+
+def main():
+    try:
+        # Extrai dados e salva em Excel
+        df = extrair_dados_livros()
+        arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'livros.xlsx')
+        df.to_excel(arquivo, index=False)
+        
+        # Mostra resumo organizado
+        mostrar_resumo(df, arquivo)
+        
+    except Exception as erro:
+        print(f"Erro: {erro}")
+
+if __name__ == "__main__":
+    main()

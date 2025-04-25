@@ -1,0 +1,91 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+import os
+from webdriver_manager.chrome import ChromeDriverManager
+
+def extrair_dados_livros():
+    navegador = None
+    try:
+        # Configuração e início do Chrome
+        servico = Service(ChromeDriverManager().install())
+        navegador = webdriver.Chrome(service=servico)
+        wait = WebDriverWait(navegador, 10)
+        
+        # Acessando o site
+        print("\nIniciando extração de dados...")
+        navegador.get('https://books.toscrape.com/')
+        livros = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'product_pod')))
+        
+        dados = []
+        
+        # Extraindo dados de cada livro
+        for livro in livros:
+            try:
+                # Coletando dados básicos
+                titulo = livro.find_element(By.CSS_SELECTOR, 'h3 a').get_attribute('title')
+                preco = float(livro.find_element(By.CLASS_NAME, 'price_color').text.replace('£', ''))
+                
+                # Entrando na página do livro
+                livro.find_element(By.CSS_SELECTOR, 'h3 a').click()
+                quantidade = int(wait.until(EC.presence_of_element_located(
+                    (By.CLASS_NAME, 'instock'))).text.replace('In stock (', '').replace(' available)', ''))
+                navegador.back()
+                wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'product_pod')))
+                
+                dados.append({
+                    'Título': titulo,
+                    'Preço (£)': preco,
+                    'Quantidade': quantidade
+                })
+                
+            except Exception as e:
+                continue
+        
+        return pd.DataFrame(dados).sort_values(by='Preço (£)')
+        
+    finally:
+        if navegador:
+            navegador.quit()
+
+def mostrar_resumo(df, arquivo):
+    # Limpa o terminal
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    # Mostra os 5 primeiros livros de forma organizada
+    print("\n=== PRIMEIROS 5 LIVROS ENCONTRADOS ===")
+    print("\n{:<60} {:>10} {:>12}".format("TÍTULO", "PREÇO (£)", "QUANTIDADE"))
+    print("-" * 84)
+    
+    for _, livro in df.head().iterrows():
+        titulo = livro['Título'][:57] + "..." if len(livro['Título']) > 57 else livro['Título']
+        print("{:<60} £{:>9.2f} {:>12}".format(
+            titulo,
+            livro['Preço (£)'],
+            livro['Quantidade']
+        ))
+    
+    print("\n" + "=" * 84)
+    print("\nESTATÍSTICAS:")
+    print(f"Total de livros cadastrados: {len(df)}")
+    print(f"Total de livros em estoque: {df['Quantidade'].sum()}")
+    print(f"\nDados salvos em: {arquivo}")
+
+def main():
+    try:
+        # Extrai dados e salva em Excel
+        df = extrair_dados_livros()
+        arquivo = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'livros.xlsx')
+        df.to_excel(arquivo, index=False)
+        
+        # Mostra resumo organizado
+        mostrar_resumo(df, arquivo)
+        
+    except Exception as erro:
+        print(f"Erro: {erro}")
+
+if __name__ == "__main__":
+    main()
