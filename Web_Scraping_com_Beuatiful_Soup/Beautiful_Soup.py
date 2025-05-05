@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import os 
 
 # Configuração do User-Agent
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'
@@ -36,8 +37,14 @@ print("Objetos encontrados:")
 for obj in objects:
     print(f"- {obj}")
 
+# Obtém o diretório do script atual
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Cria o caminho completo para o arquivo Excel
+excel_path = os.path.join(current_dir, "objetos_encontrados.xlsx")
+
 # Exporta os objetos para um arquivo Excel
 df = pd.DataFrame(objects, columns=["Objetos"])
-df.to_excel("objetos_encontrados.xlsx", index=False)
+df.to_excel(excel_path, index=False)
 
-print("\nOs objetos foram exportados para 'objetos_encontrados.xlsx'.")
+print(f"\nOs objetos foram exportados para '{excel_path}'.")
