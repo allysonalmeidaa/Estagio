@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .stat-card p {
+            margin: 10px 0 0;
+            font-size: 1.5em;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .price {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .stock {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .stock.high {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .stock.medium {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+
+        .stock.low {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .rating {
+            color: #f1c40f;
+        }
+
+        .category-badge {
+            background-color: #e8f4fd;
+            color: #2980b9;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .category-badge {
+                display: inline-block;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Catálogo de Livros</h1>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total de Livros</h3>
+                <p>{{ livros|length }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Categorias Diferentes</h3>
+                <p>{{ livros|map(attribute='categoria_nome')|unique|list|length }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Preço Médio</h3>
+                <p>£{{ "%.2f"|format(livros|map(attribute='preco')|sum / livros|length) }}</p>
+            </div>
+        </div>
+
+        {% if livros %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Avaliação</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for livro in livros %}
+                <tr>
+                    <td>{{ livro.titulo }}</td>
+                    <td class="price">£{{ "%.2f"|format(livro.preco) }}</td>
+                    <td>
+                        <span class="stock {% if livro.quantidade > 15 %}high{% elif livro.quantidade > 5 %}medium{% else %}low{% endif %}">
+                            {{ livro.quantidade }} un
+                        </span>
+                    </td>
+                    <td class="rating">
+                        {% for _ in range(livro.avaliacao) %}★{% endfor %}
+                        {% for _ in range(5 - livro.avaliacao) %}☆{% endfor %}
+                    </td>
+                    <td><span class="category-badge">{{ livro.categoria_nome }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>Nenhum livro encontrado no catálogo.</p>
+        {% endif %}
+
+        <a href="/" class="back-button">← Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>
