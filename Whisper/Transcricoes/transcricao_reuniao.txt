@@ -1,68 +1,52 @@
-[0:00:04 -> 0:00:06] SPEAKER_00: Pronto a gravação foi iniciada. Então Álvaro muito obrigado pela sua ajuda cara. Eu precisava
+[0:00:04 -> 0:00:06] SPEAKER_00: Pronto, a gravação foi iniciada. Então, Álvaro, muito obrigada pela sua ajuda, cara. Eu precisava fazer essa pequena reunião ali, tipo de uns, sei lá, uns minutinhos, dois minutos, pelo menos, pra fazer o teste lá da IACA que eu estou usando através do Python.
 
-[0:00:13 -> 0:00:16] SPEAKER_00: Pronto a gravação foi iniciada. Então Álvaro muito obrigado pela sua ajuda cara. Eu precisava  fazer essa pequena reunião ali tipo de uns minutos, dois minutos pelo menos para fazer o teste lá
+[0:00:27 -> 0:00:29] SPEAKER_00: Pronto, a gravação foi iniciada. Então, Álvaro, muito obrigada pela sua ajuda, cara. Eu precisava fazer essa pequena reunião ali, tipo de uns, sei lá, uns minutinhos, dois minutos, pelo menos, pra fazer o teste lá da IACA que eu estou usando através do Python.  Que o Menom me passou uma IACA que tu consegue utilizar através do Python, tá ligado? Aí você, tipo, ela vai funcionar sem porta, como se ela fosse uma biblioteca, você instala ela, ela é uma biblioteca, na verdade, do Python também.
 
-[0:00:16 -> 0:00:27] SPEAKER_00: fazer essa pequena reunião ali tipo de uns minutos, dois minutos pelo menos para fazer o teste lá  da IA que eu tô usando através do Python. Que o Menom me passou uma IA que tu consegue utilizar
+[0:00:30 -> 0:00:32] SPEAKER_00: Que o Menom me passou uma IACA que tu consegue utilizar através do Python, tá ligado? Aí você, tipo, ela vai funcionar sem porta, como se ela fosse uma biblioteca, você instala ela, ela é uma biblioteca, na verdade, do Python também.
 
-[0:00:27 -> 0:00:29] SPEAKER_00: da IA que eu tô usando através do Python. Que o Menom me passou uma IA que tu consegue utilizar
+[0:00:43 -> 0:00:47] SPEAKER_00: Que o Menom me passou uma IACA que tu consegue utilizar através do Python, tá ligado? Aí você, tipo, ela vai funcionar sem porta, como se ela fosse uma biblioteca, você instala ela, ela é uma biblioteca, na verdade, do Python também.  E daí ela funciona como? Você consegue colocar áudio lá, um arquivo MP3, por exemplo, você consegue colocar um arquivo de vídeo, tipo, por exemplo, essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?
 
-[0:00:33 -> 0:00:36] SPEAKER_00: da IA que eu tô usando através do Python. Que o Menom me passou uma IA que tu consegue utilizar  através do Python tá ligado? Aí você tipo, ela vai funcionar, você importa ela como se ela fosse
+[0:00:47 -> 0:00:49] SPEAKER_00: E daí ela funciona como? Você consegue colocar áudio lá, um arquivo MP3, por exemplo, você consegue colocar um arquivo de vídeo, tipo, por exemplo, essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?
 
-[0:00:37 -> 0:00:38] SPEAKER_00: através do Python tá ligado? Aí você tipo, ela vai funcionar, você importa ela como se ela fosse
+[0:01:00 -> 0:01:02] SPEAKER_00: E daí ela funciona como? Você consegue colocar áudio lá, um arquivo MP3, por exemplo, você consegue colocar um arquivo de vídeo, tipo, por exemplo, essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?  Aí um MP4, por exemplo, daí tem aqueles arquivos, um outro de áudio que eu gravei pelo microfone do computador que é o M4A e tem outros formatos. Aí ela consegue, tipo, você coloca até o áudio lá e ela transcreve o que tá no áudio.
 
-[0:00:39 -> 0:00:43] SPEAKER_00: através do Python tá ligado? Aí você tipo, ela vai funcionar, você importa ela como se ela fosse  uma biblioteca, você instala ela, ela é uma biblioteca na verdade do Python também e daí
+[0:01:02 -> 0:01:10] SPEAKER_00: Aí um MP4, por exemplo, daí tem aqueles arquivos, um outro de áudio que eu gravei pelo microfone do computador que é o M4A e tem outros formatos. Aí ela consegue, tipo, você coloca até o áudio lá e ela transcreve o que tá no áudio.
 
-[0:00:43 -> 0:00:47] SPEAKER_00: uma biblioteca, você instala ela, ela é uma biblioteca na verdade do Python também e daí
+[0:01:20 -> 0:01:33] SPEAKER_00: Além dela transcrever o que tá no áudio, ela consegue também, tipo, dependendo do lado que você coloca no código, ela consegue detectar qual é o idioma que tá sendo falado naquele áudio.
 
-[0:00:47 -> 0:00:49] SPEAKER_00: uma biblioteca, você instala ela, ela é uma biblioteca na verdade do Python também e daí  ela funciona como? Você consegue colocar áudio lá, um arquivo MP3 por exemplo, você consegue
+[0:01:34 -> 0:01:38] SPEAKER_00: E daí outra coisa também é que ela pode, por exemplo, a gente tá aqui falando em português, eu posso lá transcrever e também posso pedir pra ele traduzir pro inglês, por exemplo.
 
-[0:00:49 -> 0:01:00] SPEAKER_00: ela funciona como? Você consegue colocar áudio lá, um arquivo MP3 por exemplo, você consegue  colocar um arquivo de vídeo, por exemplo essa aqui é a gravação de tela, ela vai gerar um
+[0:01:48 -> 0:01:52] SPEAKER_00: E daí outra coisa também é que ela pode, por exemplo, a gente tá aqui falando em português, eu posso lá transcrever e também posso pedir pra ele traduzir pro inglês, por exemplo.  É outra coisa que ela também pode fazer. Então é só mais pra testar, que eu testei com áudios MP3 até o momento e não testei com vídeo.
 
-[0:01:00 -> 0:01:02] SPEAKER_00: arquivo de vídeo né, aí um MP4 por exemplo, daí tem aqueles arquivos, um outro de áudio que eu
+[0:01:53 -> 0:01:57] SPEAKER_00: É outra coisa que ela também pode fazer. Então é só mais pra testar, que eu testei com áudios MP3 até o momento e não testei com vídeo.
 
-[0:01:02 -> 0:01:10] SPEAKER_00: arquivo de vídeo né, aí um MP4 por exemplo, daí tem aqueles arquivos, um outro de áudio que eu  gravei pelo microfone no computador que é o M4A e tem outros formatos, aí ela consegue tipo,
+[0:02:02 -> 0:02:04] SPEAKER_01: Aí não, né, cara? Vou montar pra menão você falar isso daí, mano.
 
-[0:01:12 -> 0:01:13] SPEAKER_00: gravei pelo microfone no computador que é o M4A e tem outros formatos, aí ela consegue tipo,
+[0:02:10 -> 0:02:13] SPEAKER_01: Eu vou...
 
-[0:01:13 -> 0:01:19] SPEAKER_00: gravei pelo microfone no computador que é o M4A e tem outros formatos, aí ela consegue tipo,  você coloca até o áudio lá e ela transcreve o que tá no áudio. Além dela transcrever o que tá no
+[0:02:14 -> 0:02:14] SPEAKER_01: Pra ele ver que tá funcionando.
 
-[0:01:20 -> 0:01:33] SPEAKER_00: você coloca até o áudio lá e ela transcreve o que tá no áudio. Além dela transcrever o que tá no  áudio, ela consegue também tipo, dependendo do lado que você coloca no código, ela consegue  detectar qual é o idioma que tá sendo falado naquele áudio. E daí outra coisa também é que ela pode,
+[0:02:18 -> 0:02:18] SPEAKER_01: Ah, transcreve que por mês tem muito diálogo, então.
 
-[0:01:34 -> 0:01:38] SPEAKER_00: detectar qual é o idioma que tá sendo falado naquele áudio. E daí outra coisa também é que ela pode,
+[0:02:25 -> 0:02:26] SPEAKER_01: Mas acho que já deu de alvo, Agulha, que eu vou...
 
-[0:01:39 -> 0:01:48] SPEAKER_00: por exemplo, a gente tá aqui falando em português, eu posso lá transcrever e também posso pedir  pra ele traduzir pro inglês por exemplo, é outra coisa que ela também pode fazer. Então é só mais
+[0:02:30 -> 0:02:34] SPEAKER_01: Qualquer coisa você quer, só isso é um péssaro de...
 
-[0:01:48 -> 0:01:52] SPEAKER_00: pra ele traduzir pro inglês por exemplo, é outra coisa que ela também pode fazer. Então é só mais
+[0:02:34 -> 0:02:37] SPEAKER_00: Qualquer coisa você quer, só isso é um péssaro de...  Cortar o áudio de voo. Era só pra poder testar depois.
 
-[0:01:53 -> 0:01:57] SPEAKER_00: pra ele traduzir pro inglês por exemplo, é outra coisa que ela também pode fazer. Então é só mais  pra testar, que eu testei com áudio MP3 até o momento e não testei com vídeo.
+[0:02:37 -> 0:02:40] SPEAKER_00: Cortar o áudio de voo. Era só pra poder testar depois.
 
-[0:01:58 -> 0:01:59] SPEAKER_00: pra testar, que eu testei com áudio MP3 até o momento e não testei com vídeo.
-
-[0:02:02 -> 0:02:04] SPEAKER_01: Aí não né cara, vou mostrar pra mim não você falar isso daí mano.
-
-[0:02:10 -> 0:02:13] SPEAKER_01: Eu vou.
-
-[0:02:13 -> 0:02:13] SPEAKER_01: Pra ele ver que tá flutuando.
-
-[0:02:20 -> 0:02:22] SPEAKER_01: Ah, escreve que o Palmeiras tem mundial então.
-
-[0:02:25 -> 0:02:26] SPEAKER_01: Mas acho que já deu já o bagulho aqui do voo.
-
-[0:02:27 -> 0:02:29] SPEAKER_01: Mas acho que já deu já o bagulho aqui do voo.  Qualquer coisa, qualquer coisa, você corta, só de uma parte aí.
-
-[0:02:30 -> 0:02:34] SPEAKER_01: Qualquer coisa, qualquer coisa, você corta, só de uma parte aí.
-
-[0:02:34 -> 0:02:37] SPEAKER_00: Cortar o áudio de voo. Era só pra poder, pra eu poder testar depois.
-
-[0:02:41 -> 0:02:43] SPEAKER_01: Deixa eu expissar, fazer de novo ver vídeos.
+[0:02:41 -> 0:02:43] SPEAKER_01: Fecho as pisadas de novo, é isso.
 
 [0:02:44 -> 0:02:45] SPEAKER_01: Tá fazendo alguma coisa aí? Estudando?
 
-[0:02:47 -> 0:02:48] SPEAKER_01: Não, eu dormi, tá louco.
+[0:02:47 -> 0:02:48] SPEAKER_01: Não, eu dormi também.
 
-[0:02:49 -> 0:02:50] SPEAKER_01: Ah, então tá nice.
+[0:02:49 -> 0:02:50] SPEAKER_01: Ah, então tá nice. Eu acho que eu também vou descansar hoje, amanhã, o estudo.
 
-[0:02:51 -> 0:02:54] SPEAKER_01: Eu acho que eu também vou descansar hoje, amanhã eu estudo.
+[0:02:56 -> 0:02:56] SPEAKER_01: Eu vou de antes.
 
-[0:02:56 -> 0:02:56] SPEAKER_01: Valeu, Pia, é nóis.
+[0:02:56 -> 0:02:57] SPEAKER_01: Eu vou de antes.  Valeu, piá, nois.
+
+[0:02:57 -> 0:02:58] SPEAKER_01: Valeu, piá, nois.
 
