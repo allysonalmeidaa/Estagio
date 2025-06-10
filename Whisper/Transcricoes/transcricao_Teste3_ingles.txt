@@ -1,0 +1,14 @@
+[0:00:01 -> 0:00:10] SPEAKER_00: I'm recording this audio to test an artificial intelligence that can be called a library through VSCode in Python programming
+
+[0:00:11 -> 0:00:15] SPEAKER_00: I'm recording this audio to test an artificial intelligence that can be called a library through VSCode in Python programming
+
+[0:00:22 -> 0:00:31] SPEAKER_00: It's basically used to transcribe audio, video files and similar things like that
+
+[0:00:31 -> 0:00:34] SPEAKER_00: It's basically used to transcribe audio, video files and similar things like that
+
+[0:00:35 -> 0:00:42] SPEAKER_00: To have a transcription of what is being said in the audio without you having to listen to it
+
+[0:00:43 -> 0:00:45] SPEAKER_00: Another thing is that besides transcribing, it's possible to check through the code what language is being said in the audio
+
+[0:01:01 -> 0:01:02] SPEAKER_00: Besides that, it can also be noted that it can, depending on what you ask, translate to another language that you wish
+

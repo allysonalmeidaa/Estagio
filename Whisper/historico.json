@@ -1,0 +1,23 @@
+[
+  {
+    "arquivo": "c:\\Programacao_estagio\\Whisper\\Transcricoes\\transcricao_teste.txt",
+    "nome": "transcricao_teste.txt",
+    "data": "2025-06-09 16:50",
+    "idioma": "pt"
+  },
+  {
+    "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_teste2.txt",
+    "nome": "transcricao_teste2.txt",
+    "data": "2025-06-09 14:47"
+  },
+  {
+    "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_reuniao.txt",
+    "nome": "transcricao_reuniao.txt",
+    "data": "2025-06-09 10:04"
+  },
+  {
+    "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_Teste3.txt",
+    "nome": "transcricao_Teste3.txt",
+    "data": "2025-06-05 13:46"
+  }
+]

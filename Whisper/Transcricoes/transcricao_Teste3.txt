@@ -1,0 +1,14 @@
+[0:00:01 -> 0:00:10] SPEAKER_00: Bom, estou gravando esse áudio aqui para poder fazer um teste de uma inteligência artificial
+
+[0:00:11 -> 0:00:15] SPEAKER_00: que pode ser chamada como uma biblioteca através do VSCode na programação de linguagem Python.
+
+[0:00:22 -> 0:00:31] SPEAKER_00: que pode ser chamada como uma biblioteca através do VSCode na programação de linguagem Python.  Então, basicamente ela serve para fazer transcrição de áudio, de arquivos de vídeo e coisas similares desse tipo
+
+[0:00:31 -> 0:00:34] SPEAKER_00: Então, basicamente ela serve para fazer transcrição de áudio, de arquivos de vídeo e coisas similares desse tipo
+
+[0:00:35 -> 0:00:42] SPEAKER_00: para ter uma transcrição ali do que está sendo dito no áudio sem ser necessário você escutar esse áudio.
+
+[0:00:43 -> 0:00:45] SPEAKER_00: Outro ponto é que além de transcrever é possível verificar através do código qual é o idioma que está sendo falado nesse áudio.
+
+[0:01:01 -> 0:01:02] SPEAKER_00: Além disso, também pode ser ressaltado que ele pode, dependendo do que você pedir, fazer uma tradução para outro idioma que você deseja.
+
