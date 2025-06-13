@@ -1,0 +1,84 @@
+[0:00:00 -> 0:00:01] SPEAKER_00: Speak to the channel.
+
+[0:00:02 -> 0:00:03] SPEAKER_00: Welcome to the channel.
+
+[0:00:04 -> 0:00:11] SPEAKER_00: In today's video, I will teach you how to create a download of videos from YouTube using Python and the YTDLP tool.
+
+[0:00:12 -> 0:00:19] SPEAKER_00: With this script, you can download several videos at once and even the legends, all automatically.
+
+[0:00:20 -> 0:00:23] SPEAKER_00: Stay with me until the end, I'll show you each detail.
+
+[0:00:23 -> 0:00:25] SPEAKER_00: Stay with me until the end, I'll show you each detail.  Let's go to the tutorial.
+
+[0:00:26 -> 0:00:27] SPEAKER_00: Installing the dependencies.
+
+[0:00:28 -> 0:00:43] SPEAKER_00: Before we start, we need to ensure that Python is installed in our system.  To check, just open the terminal or the command and type Python-trassoversion or Python-trassoversion in Linux and Mac.
+
+[0:00:43 -> 0:00:48] SPEAKER_00: To check, just open the terminal or the command and type Python-trassoversion or Python-trassoversion in Linux and Mac.  If Python is not installed, you can download it on the official Python.org website.
+
+[0:00:49 -> 0:00:55] SPEAKER_00: If Python is not installed, you can download it on the official Python.org website.  Now, let's install YTDLP, which will be responsible for downloading the videos.
+
+[0:00:56 -> 0:00:58] SPEAKER_00: In the terminal, type, type.  Copy the code.
+
+[0:00:59 -> 0:01:00] SPEAKER_00: Copy the code.  Type install YTDLP.
+
+[0:01:01 -> 0:01:03] SPEAKER_00: Type install YTDLP.
+
+[0:01:04 -> 0:01:07] SPEAKER_00: With this, we have everything ready to start programming.
+
+[0:01:08 -> 0:01:11] SPEAKER_00: Now let's go to the most important part, the code.
+
+[0:01:12 -> 0:01:17] SPEAKER_00: Open your favorite text editor and create a file called downloader.py.
+
+[0:01:18 -> 0:01:28] SPEAKER_00: Inside it, copy and paste the following code.  This code does the following.  It reads a file called links.txt, where the links of the videos we want to download will be.  Then, it uses YTDLP to download the videos in the mp4 format and, if there are available automatic legends, they will also be downloaded.
+
+[0:01:29 -> 0:01:38] SPEAKER_00: Then, it uses YTDLP to download the videos in the mp4 format and, if there are available automatic legends, they will also be downloaded.  So everything is saved automatically.
+
+[0:01:39 -> 0:01:42] SPEAKER_00: So everything is saved automatically.  Creating the links file.
+
+[0:01:42 -> 0:01:44] SPEAKER_00: Creating the links file.  Now that we have the script ready, we need to create a file called links.txt.
+
+[0:01:45 -> 0:01:54] SPEAKER_00: Now that we have the script ready, we need to create a file called links.txt.  This file will contain the links of the videos we want to download.  Each link must be in a separate line.
+
+[0:01:55 -> 0:02:03] SPEAKER_00: Each link must be in a separate line.  After saving this file in the same folder as the Python script, we are ready to run the program.
+
+[0:02:04 -> 0:02:06] SPEAKER_00: Creating a shortcut to execute the script.  Now, to make it even easier, let's create a shortcut to run the script with just one click.
+
+[0:02:07 -> 0:02:13] SPEAKER_00: Now, to make it even easier, let's create a shortcut to run the script with just one click.  In Windows, create a new file called downloader.batch inside it and put the following code, the echooff-thread.
+
+[0:02:14 -> 0:02:21] SPEAKER_00: In Windows, create a new file called downloader.batch inside it and put the following code, the echooff-thread.  Python downloader.py
+
+[0:02:22 -> 0:02:24] SPEAKER_00: Pause.  Now, every time you want to download the videos, just click twice in this file, and in Linux, create a file called downloader.sh-addition.
+
+[0:02:25 -> 0:02:25] SPEAKER_00: Now, every time you want to download the videos, just click twice in this file, and in Linux, create a file called downloader.sh-addition.
+
+[0:02:26 -> 0:02:38] SPEAKER_00: Now, every time you want to download the videos, just click twice in this file, and in Linux, create a file called downloader.sh-addition.  Hashtag.  bmbarra-batch
+
+[0:02:39 -> 0:02:40] SPEAKER_00: bmbarra-batch  Python 3 downloader.py
+
+[0:02:41 -> 0:02:43] SPEAKER_00: Python 3 downloader.py
+
+[0:02:44 -> 0:02:50] SPEAKER_00: Then, make the executable file with this command in the terminal, showdmxdownloader.sh  Now, you can run the script with just one click or execute it in the terminal using the downloader.sh.
+
+[0:02:51 -> 0:02:57] SPEAKER_00: Now, you can run the script with just one click or execute it in the terminal using the downloader.sh.
+
+[0:02:58 -> 0:02:59] SPEAKER_00: Testing the script.
+
+[0:03:00 -> 0:03:02] SPEAKER_00: Now, it's time to test.  Let's run the script and see if it really runs the videos and the legends correctly.
+
+[0:03:03 -> 0:03:08] SPEAKER_00: Let's run the script and see if it really runs the videos and the legends correctly.  If everything went well, the videos should be saved in the download folder, and if there are any legends available, they will also be there.
+
+[0:03:09 -> 0:03:17] SPEAKER_00: If everything went well, the videos should be saved in the download folder, and if there are any legends available, they will also be there.  Conclusion
+
+[0:03:17 -> 0:03:18] SPEAKER_00: Conclusion  And that's it.
+
+[0:03:19 -> 0:03:20] SPEAKER_00: And that's it.  Now you already know how to create an automatic downloader of YouTube videos using Python.
+
+[0:03:21 -> 0:03:26] SPEAKER_00: Now you already know how to create an automatic downloader of YouTube videos using Python.  With this script, you can download several videos at once and even save the legends automatically.
+
+[0:03:26 -> 0:03:40] SPEAKER_00: With this script, you can download several videos at once and even save the legends automatically.  If you liked this tutorial, don't forget to leave the like, subscribe to the channel and activate the bell so you don't miss the next videos.  If you have any questions, comment below and I'll try to help you.
+
+[0:03:41 -> 0:03:45] SPEAKER_00: If you have any questions, comment below and I'll try to help you.
+
+[0:03:46 -> 0:03:48] SPEAKER_00: Thanks for watching and see you next time.
+

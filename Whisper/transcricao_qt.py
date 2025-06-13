@@ -4,11 +4,12 @@ import json
 from datetime import datetime
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QPushButton,
-    QFileDialog, QVBoxLayout, QHBoxLayout, QTextEdit, QComboBox, QMessageBox, QProgressBar, QListWidget, QLineEdit, QDialog
+    QFileDialog, QVBoxLayout, QHBoxLayout, QTextEdit, QComboBox, QMessageBox, QProgressBar,
+    QListWidget, QLineEdit
 )
 from PyQt5.QtGui import QIntValidator, QIcon
 from PyQt5.QtCore import QThread, pyqtSignal, Qt
-from transcricao_core import transcrever_com_diarizacao
+from Transcricao_core import transcrever_com_diarizacao
 
 PASTA_SCRIPT = os.path.dirname(os.path.abspath(__file__))
 HISTORICO_PATH = os.path.join(PASTA_SCRIPT, "historico.json")
@@ -21,7 +22,6 @@ IDIOMAS = [
     ("es", "Espanhol"),
     ("fr", "Francês"),
     ("de", "Alemão"),
-    # Adicione outros idiomas se desejar
 ]
 
 class DropWidget(QWidget):
@@ -29,6 +29,17 @@ class DropWidget(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setAcceptDrops(True)
+
+        # Centralização horizontal e vertical do texto dentro da área cinza
+        self.label = QLabel("Arraste e solte um arquivo de áudio ou vídeo aqui")
+        self.label.setAlignment(Qt.AlignCenter)
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.addStretch(1)
+        layout.addWidget(self.label)
+        layout.addStretch(1)
+
     def dragEnterEvent(self, event):
         if event.mimeData().hasUrls():
             event.accept()
@@ -41,11 +52,12 @@ class DropWidget(QWidget):
                 self.fileDropped.emit(file_path)
                 break
 
-class ConfigDialog(QDialog):
-    def __init__(self, config_atual):
+class ConfigDialog(QWidget):
+    def __init__(self, config_atual, salvar_callback):
         super().__init__()
         self.setWindowTitle("Configurações")
         self.setFixedSize(320, 200)
+        self.salvar_callback = salvar_callback
 
         self.combo_modelo = QComboBox()
         self.combo_modelo.addItems(["tiny", "base", "small", "medium", "large"])
@@ -75,9 +87,9 @@ class ConfigDialog(QDialog):
 
         btns = QHBoxLayout()
         btn_salvar = QPushButton("Salvar")
-        btn_salvar.clicked.connect(self.accept)
+        btn_salvar.clicked.connect(self.salvar)
         btn_cancelar = QPushButton("Cancelar")
-        btn_cancelar.clicked.connect(self.reject)
+        btn_cancelar.clicked.connect(self.close)
         btns.addStretch()
         btns.addWidget(btn_salvar)
         btns.addWidget(btn_cancelar)
@@ -85,12 +97,15 @@ class ConfigDialog(QDialog):
 
         self.setLayout(layout)
 
-    def get_config(self):
-        return {
+    def salvar(self):
+        novo_config = {
             "modelo": self.combo_modelo.currentText(),
             "idioma": self.combo_idioma.currentData(),
             "max_historico": int(self.txt_max_hist.text() or 20)
         }
+        self.salvar_callback(novo_config)
+        QMessageBox.information(self, "Configurações", "Salvo com sucesso!")
+        self.close()
 
 class TranscricaoThread(QThread):
     progresso = pyqtSignal(int, str)
@@ -119,18 +134,65 @@ class TranscricaoApp(QMainWindow):
         self.setGeometry(200, 200, 900, 650)
 
         self.config = self.carregar_config()
-
         self.caminho_arquivo = ""
-        self.label_arquivo = QLabel("Arquivo: nenhum selecionado")
 
-        self.label_status = QLabel("Aguardando para começar.")
-
-        self.btn_abrir = QPushButton("Selecionar arquivo")
-        self.btn_abrir.clicked.connect(self.selecionar_arquivo)
-
+        # Top bar estilo abas
         self.btn_config = QPushButton("Configurações")
+        self.btn_config.setCursor(Qt.PointingHandCursor)
+        self.btn_config.setFlat(True)
+        self.btn_config.setStyleSheet("""
+            QPushButton {
+                background: transparent;
+                border: none;
+                padding: 2px 16px 2px 16px;
+                font-weight: normal;
+                font-size: 15px;
+            }
+            QPushButton:hover {
+                background: #e0e0e0;
+            }
+        """)
         self.btn_config.clicked.connect(self.abrir_configuracoes)
 
+        self.btn_sobre = QPushButton("Sobre")
+        self.btn_sobre.setCursor(Qt.PointingHandCursor)
+        self.btn_sobre.setFlat(True)
+        self.btn_sobre.setStyleSheet("""
+            QPushButton {
+                background: transparent;
+                border: none;
+                padding: 2px 16px 2px 16px;
+                font-weight: normal;
+                font-size: 15px;
+            }
+            QPushButton:hover {
+                background: #e0e0e0;
+            }
+        """)
+        self.btn_sobre.clicked.connect(self.mostrar_sobre)
+
+        # Barra do topo
+        top_bar = QHBoxLayout()
+        top_bar.setContentsMargins(0, 2, 0, 2)
+        top_bar.setSpacing(0)
+        top_bar.addWidget(self.btn_config)
+        top_bar.addWidget(self.btn_sobre)
+        top_bar.addStretch()
+        top_bar_widget = QWidget()
+        top_bar_widget.setLayout(top_bar)
+        top_bar_widget.setStyleSheet("border-bottom: 1px solid #bbb;")
+
+        # Layout principal da esquerda (com espaçamento)
+        layout_principal = QHBoxLayout()
+        layout_esquerda = QVBoxLayout()
+        layout_direita = QVBoxLayout()
+        layout_esquerda.setContentsMargins(0, 0, 0, 0)
+        layout_esquerda.setSpacing(0)  # Espaçamento controlado manualmente
+
+        layout_esquerda.addWidget(top_bar_widget)
+        layout_esquerda.addSpacing(10)  # Espaço após linha divisória
+
+        # Bloco de modelo, idioma e selecionar arquivo
         self.label_modelo = QLabel("Modelo Whisper:")
         self.combo_modelos = QComboBox()
         self.combo_modelos.addItems(["tiny", "base", "small", "medium", "large"])
@@ -148,57 +210,69 @@ class TranscricaoApp(QMainWindow):
                 break
         self.combo_idioma.setCurrentIndex(idx_idioma)
 
-        self.btn_transcrever = QPushButton("Transcrever")
-        self.btn_transcrever.clicked.connect(self.transcrever)
-
-        self.texto_transcricao = QTextEdit()
-        self.texto_transcricao.setReadOnly(True)
-
-        self.progress = QProgressBar()
-        self.progress.setValue(0)
-        self.progress.setVisible(False)
-
-        self.drop_area = DropWidget()
-        self.drop_area.setMinimumHeight(60)
-        self.drop_area.setStyleSheet("border: 2px dashed #aaa; background: #f3f3f3;")
-        self.drop_area.fileDropped.connect(self.arquivo_arrastado)
-        self.drop_label = QLabel("Arraste e solte um arquivo de áudio ou vídeo aqui")
-        self.drop_label.setAlignment(Qt.AlignCenter)
-
-        self.busca_historico = QLineEdit()
-        self.busca_historico.setPlaceholderText("Buscar no histórico...")
-        self.busca_historico.textChanged.connect(self.filtrar_historico)
-
-        self.btn_remover = QPushButton("Remover selecionado")
-        self.btn_remover.clicked.connect(self.remover_selecionado)
-        self.btn_limpar = QPushButton("Limpar histórico")
-        self.btn_limpar.clicked.connect(self.limpar_historico)
-
-        self.label_historico = QLabel("Histórico de transcrições:")
-        self.lista_historico = QListWidget()
-        self.lista_historico.itemClicked.connect(self.abrir_do_historico)
-
-        layout_principal = QHBoxLayout()
-        layout_esquerda = QVBoxLayout()
-        layout_direita = QVBoxLayout()
+        self.btn_abrir = QPushButton("Selecionar arquivo")
+        self.btn_abrir.setFixedHeight(28)
+        self.btn_abrir.clicked.connect(self.selecionar_arquivo)
 
         hlayout = QHBoxLayout()
         hlayout.addWidget(self.label_modelo)
         hlayout.addWidget(self.combo_modelos)
+        hlayout.addSpacing(10)
         hlayout.addWidget(self.label_idioma)
         hlayout.addWidget(self.combo_idioma)
         hlayout.addStretch()
         hlayout.addWidget(self.btn_abrir)
 
         layout_esquerda.addLayout(hlayout)
-        layout_esquerda.addWidget(self.btn_config)
+        layout_esquerda.addSpacing(8)
+
+        # Status centralizado
+        self.label_status = QLabel("Aguardando para começar.")
+        self.label_status.setAlignment(Qt.AlignCenter)
+        self.label_status.setFixedHeight(18)
         layout_esquerda.addWidget(self.label_status)
+        layout_esquerda.addSpacing(8)
+
+        self.label_arquivo = QLabel("Arquivo: nenhum selecionado")
         layout_esquerda.addWidget(self.label_arquivo)
+        layout_esquerda.addSpacing(8)
+
+        self.btn_transcrever = QPushButton("Transcrever")
+        self.btn_transcrever.clicked.connect(self.transcrever)
         layout_esquerda.addWidget(self.btn_transcrever)
+        layout_esquerda.addSpacing(8)
+
+        self.progress = QProgressBar()
+        self.progress.setValue(0)
+        self.progress.setVisible(False)
         layout_esquerda.addWidget(self.progress)
-        layout_esquerda.addWidget(self.drop_label)
+        layout_esquerda.addSpacing(8)
+
+        # Drop area centralizada e menor
+        self.drop_area = DropWidget()
+        self.drop_area.setFixedHeight(70)
+        self.drop_area.setStyleSheet("background: #f3f3f3;")
+        self.drop_area.fileDropped.connect(self.arquivo_arrastado)
         layout_esquerda.addWidget(self.drop_area)
+        layout_esquerda.addSpacing(8)
+
+        self.texto_transcricao = QTextEdit()
+        self.texto_transcricao.setReadOnly(True)
         layout_esquerda.addWidget(self.texto_transcricao)
+
+        # Direita
+        self.busca_historico = QLineEdit()
+        self.busca_historico.setPlaceholderText("Buscar no histórico...")
+        self.busca_historico.textChanged.connect(self.filtrar_historico)
+
+        self.btn_remover = QPushButton("Remover selecionado")
+        self.btn_limpar = QPushButton("Limpar histórico")
+        self.btn_remover.clicked.connect(self.remover_selecionado)
+        self.btn_limpar.clicked.connect(self.limpar_historico)
+
+        self.label_historico = QLabel("Histórico de transcrições:")
+        self.lista_historico = QListWidget()
+        self.lista_historico.itemClicked.connect(self.abrir_do_historico)
 
         layout_direita.addWidget(self.busca_historico)
         layout_direita.addWidget(self.label_historico)
@@ -215,7 +289,6 @@ class TranscricaoApp(QMainWindow):
 
         self.thread = None
         self._historico_cache = []
-
         self.carregar_historico()
 
     def carregar_config(self):
@@ -240,11 +313,25 @@ class TranscricaoApp(QMainWindow):
         self.combo_idioma.setCurrentIndex(idx_idioma)
 
     def abrir_configuracoes(self):
-        dlg = ConfigDialog(self.config)
-        if dlg.exec_():
-            novo_config = dlg.get_config()
-            self.salvar_config(novo_config)
-            QMessageBox.information(self, "Configurações", "Salvo com sucesso!")
+        self.conf_dialog = ConfigDialog(self.config, self.salvar_config)
+        self.conf_dialog.setWindowModality(Qt.ApplicationModal)
+        self.conf_dialog.show()
+
+    def mostrar_sobre(self):
+        texto = """
+        <b>Transcrição com Whisper (Qt)</b><br>
+        Desenvolvido por Allyson Almeida Sirvano<br>
+        Sob a supervisão de Mauricio Menon<br>
+        Data: Junho/2025<br>
+        <a href="https://github.com/allysonalmeidaa">GitHub do autor</a>
+        """
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Sobre")
+        msg.setTextFormat(Qt.RichText)
+        msg.setText(texto)
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.setTextInteractionFlags(Qt.TextBrowserInteraction)
+        msg.exec_()
 
     def selecionar_arquivo(self):
         fname, _ = QFileDialog.getOpenFileName(
@@ -301,7 +388,6 @@ class TranscricaoApp(QMainWindow):
         pasta = os.path.dirname(os.path.abspath(__file__))
         caminho_transcr = os.path.join(pasta, "Transcricoes", f"transcricao_{base}.txt")
         idioma_cod = self.combo_idioma.currentData()
-        idioma_nome = self.combo_idioma.currentText()
         data = {
             "arquivo": caminho_transcr,
             "nome": f"transcricao_{base}.txt",

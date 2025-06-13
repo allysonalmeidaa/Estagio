@@ -1,0 +1,84 @@
+[0:00:00 -> 0:00:01] SPEAKER_00: Fala pessoal!
+
+[0:00:02 -> 0:00:03] SPEAKER_00: Seja bem-vindo ao canal!
+
+[0:00:04 -> 0:00:11] SPEAKER_00: No vídeo de hoje, eu vou te ensinar a criar um download de vídeos do YouTube usando Python e a ferramenta YTDLP.
+
+[0:00:12 -> 0:00:19] SPEAKER_00: Com esse script, você poderá baixar vários vídeos de uma só vez e até mesmo as legendas, tudo de forma automática.
+
+[0:00:20 -> 0:00:23] SPEAKER_00: Fica comigo até o final que eu vou te mostrar cada detalhe.
+
+[0:00:23 -> 0:00:25] SPEAKER_00: Fica comigo até o final que eu vou te mostrar cada detalhe.  Bora pro tutorial!
+
+[0:00:26 -> 0:00:27] SPEAKER_00: Instalando as dependências.
+
+[0:00:28 -> 0:00:43] SPEAKER_00: Antes de começarmos, precisamos garantir que o Python está instalado no nosso sistema.  Para conferir, basta abrir o terminal ou o pronte de comando e digitar, Python traço traço versiom, ou Python 3 traço traço versiom no Linux e Mac.
+
+[0:00:43 -> 0:00:48] SPEAKER_00: Para conferir, basta abrir o terminal ou o pronte de comando e digitar, Python traço traço versiom, ou Python 3 traço traço versiom no Linux e Mac.  Se o Python não estiver instalado, você pode baixá-lo no site oficial python.org.
+
+[0:00:49 -> 0:00:55] SPEAKER_00: Se o Python não estiver instalado, você pode baixá-lo no site oficial python.org.  Agora, vamos instalar o YTDLP, que será o responsável por baixar os vídeos.
+
+[0:00:56 -> 0:00:58] SPEAKER_00: No terminal, digite, desche.
+
+[0:00:59 -> 0:01:00] SPEAKER_00: Copiar código.
+
+[0:01:01 -> 0:01:03] SPEAKER_00: Pipe install YTDLP.
+
+[0:01:04 -> 0:01:07] SPEAKER_00: Com isso, já temos tudo pronto para começar a programar.
+
+[0:01:08 -> 0:01:11] SPEAKER_00: Agora vamos para a parte mais importante, o código.
+
+[0:01:12 -> 0:01:17] SPEAKER_00: Abra seu editor de texto favorito e crie um arquivo chamado downloader.py.
+
+[0:01:18 -> 0:01:28] SPEAKER_00: Dentro dele copie e cole o seguinte código.  Esse código faz o seguinte, ele leu um arquivo chamado links.txt, onde estarão os links dos vídeos que queremos baixar.
+
+[0:01:29 -> 0:01:38] SPEAKER_00: Depois, ele usa o YTDLP para baixar os vídeos no formato mp4 e, se houver legendas automáticas disponíveis, elas também serão baixadas.
+
+[0:01:39 -> 0:01:42] SPEAKER_00: Assim fica tudo salvo automaticamente.  Criando o arquivo de links.
+
+[0:01:42 -> 0:01:44] SPEAKER_00: Criando o arquivo de links.
+
+[0:01:45 -> 0:01:54] SPEAKER_00: Agora que temos o script pronto, precisamos criar um arquivo chamado links.txt.  Esse arquivo vai conter os links dos vídeos que queremos baixar.
+
+[0:01:55 -> 0:02:03] SPEAKER_00: Cada link deve ficar em uma linha separada assim.  Depois de salvar esse arquivo na mesma pasta do script python, estamos prontos para rodar o programa.
+
+[0:02:04 -> 0:02:06] SPEAKER_00: Criando um atalho para executar o script.
+
+[0:02:07 -> 0:02:13] SPEAKER_00: Agora, para facilitar ainda mais, vamos criar um atalho para rodar o script com apenas um clique.
+
+[0:02:14 -> 0:02:21] SPEAKER_00: No Windows, cria um novo arquivo chamado downloader.bat.  Dentro dele coloque o seguinte código, a roba echooff.
+
+[0:02:22 -> 0:02:24] SPEAKER_00: Python downloader.py
+
+[0:02:25 -> 0:02:25] SPEAKER_00: Pause.
+
+[0:02:26 -> 0:02:38] SPEAKER_00: Agora, toda vez que você quiser baixar os vídeos, basta clicar duas vezes nesse arquivo, e no Linux, cria um arquivo chamado downloader.sh-addition.  Hashtag.bin-bash.
+
+[0:02:39 -> 0:02:40] SPEAKER_00: Hashtag.bin-bash.
+
+[0:02:41 -> 0:02:43] SPEAKER_00: Python 3 downloader.py
+
+[0:02:44 -> 0:02:50] SPEAKER_00: Depois torne o arquivo executável com este comando no terminal, shod-mys-sh-downloader.sh.
+
+[0:02:51 -> 0:02:57] SPEAKER_00: Agora você pode rodar o script com apenas um clique ou executá-lo no terminal usando o ponto downloader.sh.
+
+[0:02:58 -> 0:02:59] SPEAKER_00: Testando o script.
+
+[0:03:00 -> 0:03:02] SPEAKER_00: Agora chegou o momento de testar.
+
+[0:03:03 -> 0:03:08] SPEAKER_00: Vamos rodar o script e ver se ele realmente baixa os vídeos e as legendas corretamente.
+
+[0:03:09 -> 0:03:17] SPEAKER_00: Se tudo correu bem, os vídeos devem estar salvos na pasta downloads, e se houver legendas disponíveis, elas também estarão lá.  Conclusão.
+
+[0:03:17 -> 0:03:18] SPEAKER_00: Conclusão.
+
+[0:03:19 -> 0:03:20] SPEAKER_00: E é isso.
+
+[0:03:21 -> 0:03:26] SPEAKER_00: Agora você já sabe como criar um downloader automático de vídeos do YouTube usando Python.  Com esse script, você pode baixar vários vídeos de uma vez e até salvar as legendas automaticamente.
+
+[0:03:26 -> 0:03:40] SPEAKER_00: Com esse script, você pode baixar vários vídeos de uma vez e até salvar as legendas automaticamente.  Se você gostou desse tutorial, não esquece de deixar o like, se inscrever no canal e ativar o sininho para não perder os próximos vídeos.
+
+[0:03:41 -> 0:03:45] SPEAKER_00: Se ficou com alguma dúvida, comenta aqui embaixo que eu vou tentar te ajudar.
+
+[0:03:46 -> 0:03:48] SPEAKER_00: Valeu por assistir e até a próxima!
+
