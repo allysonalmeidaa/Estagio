@@ -1,5 +1,11 @@
 [
   {
+    "arquivo": "C:\\Programacao_estagio\\Whisper\\Transcricoes\\transcricao_reuniao.txt",
+    "nome": "transcricao_reuniao.txt",
+    "data": "2025-06-16 14:04",
+    "idioma": "pt"
+  },
+  {
     "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_audio_20250612_163046_video_20250612_163041_Como Criar um Downloader de Vídeos do YouTube com Python – Rápido e Fácil! 🚀📥.txt",
     "nome": "transcricao_audio_20250612_163046_video_20250612_163041_Como Criar um Downloader de Vídeos do YouTube com Python – Rápido e Fácil! 🚀📥.txt",
     "data": "2025-06-12 16:40",
@@ -21,15 +27,5 @@
     "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_teste2.txt",
     "nome": "transcricao_teste2.txt",
     "data": "2025-06-09 14:47"
-  },
-  {
-    "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_reuniao.txt",
-    "nome": "transcricao_reuniao.txt",
-    "data": "2025-06-09 10:04"
-  },
-  {
-    "arquivo": "C:\\Programacao_estagio\\whisper\\Transcricoes\\transcricao_Teste3.txt",
-    "nome": "transcricao_Teste3.txt",
-    "data": "2025-06-05 13:46"
   }
 ]
