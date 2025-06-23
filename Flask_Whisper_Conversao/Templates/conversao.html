@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Conversão | Processador de Áudio e Vídeo{% endblock %}
+{% block content %}
+<div class="central-box">
+    <h2>Conversão de Áudio/Vídeo</h2>
+    <form method="post" enctype="multipart/form-data" class="form-box">
+        <div class="linha-form">
+            <label>Arquivo local:
+                <input type="file" name="file">
+            </label>
+            <span style="margin: 0 1em; font-weight: bold;">ou</span>
+            <label>Link do YouTube:
+                <input type="text" name="youtube_link" placeholder="Cole o link do vídeo...">
+            </label>
+        </div>
+        <div class="linha-form">
+            <label>Formato de saída:
+                <select name="formato_saida">
+                    <option value="mp3">MP3</option>
+                    <option value="wav">WAV</option>
+                    <option value="ogg">OGG</option>
+                    <option value="flac">FLAC</option>
+                    <option value="mp4">MP4</option>
+                    <option value="mkv">MKV</option>
+                    <option value="webm">WEBM</option>
+                </select>
+            </label>
+            <button type="submit" class="btn-acao">Converter</button>
+        </div>
+    </form>
+    {% if error %}
+        <div class="erro">{{ error }}</div>
+    {% endif %}
+    {% if resultado_conversao %}
+        <div class="downloads-box">
+            <span>Baixar:</span>
+            {% if video_original %}
+                <a href="{{ url_for('baixar_conversao', filename=video_original) }}" class="download-link">Vídeo Original</a>
+            {% endif %}
+            {% if audio_extraido %}
+                <a href="{{ url_for('baixar_conversao', filename=audio_extraido) }}" class="download-link">Somente Áudio</a>
+            {% endif %}
+            <a href="{{ url_for('baixar_conversao', filename=resultado_conversao) }}" class="download-link">Arquivo Convertido</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

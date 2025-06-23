@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Transcrição | Processador de Áudio e Vídeo{% endblock %}
+{% block content %}
+<div class="central-box">
+    <h2>Transcrição de Áudio/Vídeo</h2>
+    <form method="POST" enctype="multipart/form-data" class="form-box">
+        <div class="linha-form">
+            <label for="modelo">Modelo Whisper:</label>
+            <select id="modelo" name="modelo">
+                <option value="tiny" {% if modelo == 'tiny' %}selected{% endif %}>Tiny</option>
+                <option value="base" {% if modelo == 'base' %}selected{% endif %}>Base</option>
+                <option value="small" {% if modelo == 'small' %}selected{% endif %}>Small</option>
+                <option value="medium" {% if modelo == 'medium' %}selected{% endif %}>Medium</option>
+                <option value="large" {% if modelo == 'large' %}selected{% endif %}>Large</option>
+            </select>
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" name="idioma">
+                <option value="" {% if idioma == '' %}selected{% endif %}>Detectar automático</option>
+                <option value="pt" {% if idioma == 'pt' %}selected{% endif %}>Português</option>
+                <option value="en" {% if idioma == 'en' %}selected{% endif %}>Inglês</option>
+                <option value="es" {% if idioma == 'es' %}selected{% endif %}>Espanhol</option>
+                <!-- Adicione outros idiomas se necessário -->
+            </select>
+        </div>
+        <div class="linha-form">
+            <label for="file">Escolher arquivo:</label>
+            <input type="file" id="file" name="file" required>
+        </div>
+        <button type="submit" class="btn-acao">Transcrever</button>
+    </form>
+    {% if transcricao %}
+        <div class="transcricao-box">{{ transcricao }}</div>
+    {% endif %}
+    <div class="downloads-box">
+        {% if filename %}
+            <a href="{{ url_for('download', filename=filename) }}" class="download-link">Baixar Transcrição (Português)</a>
+        {% endif %}
+        {% if filename_en %}
+            <a href="{{ url_for('download', filename=filename_en) }}" class="download-link">Baixar Transcrição (Inglês)</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

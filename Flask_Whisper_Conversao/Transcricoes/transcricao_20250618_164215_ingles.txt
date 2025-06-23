@@ -1,0 +1,51 @@
+[0:00:04 -> 0:00:06] SPEAKER_00: Ready, the recording was started.So Álvaro, thank you very much for your help, man.I needed to make this little meeting there, like some, I don't know, a few minutes, two minutes, at least, to take the test there from Iaca I'm using through Python.
+
+[0:00:27 -> 0:00:29] Speaker_00: Ready, the recording was started.So Álvaro, thank you very much for your help, man.I needed to make this little meeting there, like some, I don't know, a few minutes, two minutes, at least, to take the test there from Iaca I'm using through Python.That Menom gave me an iaca that you can use through Python, are you on?Then you, like, will work without door, as if it were a library, you install it, it is a library, in fact, Python as well.
+
+[0:00:30 -> 0:00:32] SPEAKER_00: That Menom gave me an iaca that you can use through Python, are you connected?Then you, like, will work without door, as if it were a library, you install it, it is a library, in fact, Python as well.
+
+[0:00:43 -> 0:00:47] SPEAKER_00: That Menom gave me an iaca that you can use through python, are you on?Then you, like, will work without door, as if it were a library, you install it, it is a library, in fact, Python as well.And then it works like?You can put audio there, an MP3 file, for example, you can put a video file, like, for example, this is the screen recording, it will generate a video file, right?
+
+[0:00:47 -> 0:00:49] SPEAKER_00: So it works like?You can put audio there, an MP3 file, for example, you can put a video file, like, for example, this is the screen recording, it will generate a video file, right?
+
+[0:01:00 -> 0:01:02] SPEAKER_00: So it works like?You can put audio there, an MP3 file, for example, you can put a video file, like, for example, this is the screen recording, it will generate a video file, right?Then an MP4, for example, then has those files, another audio that I recorded through the computer microphone which is the M4A and has other formats.Then she can, like, you put up to the audio there and it transcribes what's in the audio.
+
+[0:01:02 -> 0:01:10] Speaker_00: Then an MP4, for example, then there are those files, another audio that I recorded through the computer microphone that is the M4A and has other formats.Then she can, like, you put up to the audio there and it transcribes what's in the audio.
+
+[0:01:20 -> 0:01:33] SPEAKER_00: In addition to transcribing what is in the audio, it can also, like, depending on the side you put in the code, she can detect which language is being said in that audio.
+
+[0:01:34 -> 0:01:38] SPEAKER_00: And so it is also that she can, for example, we are here talking about Portuguese, I can transcribe there and I can also ask him to translate to English, for example.
+
+[0:01:48 -> 0:01:52] SPEAKER_00: And then another thing is that she can, for example, we are here talking in Portuguese, I can transcribe there and I can also ask him to translate to English, for example.It's something else she can do too.So it's just more to test, which I tested with MP3 audios so far and didn't tested with video.
+
+[0:01:53 -> 0:01:57] Speaker_00: It's something else she can do too.So it's just more to test, which I tested with MP3 audios so far and didn't tested with video.
+
+[0:02:02 -> 0:02:04] Speaker_01: no, right, man?I'm going to ride for me no to say that from there, bro.
+
+[0:02:10 -> 0:02:13] SPEAKER_01: I will ...
+
+[0:02:14 -> 0:02:14] SPEAKER_01: For him to see that it is working.
+
+[0:02:18 -> 0:02:18] Speaker_01: Ah, transcribes that a month has a lot of dialogue, then.
+
+[0:02:25 -> 0:02:26] SPEAKER_01: But I think you've been targeting, needle, I'm going ...
+
+[0:02:30 -> 0:02:34] SPEAKER_01: Anything you want, that's a peassar
+
+[0:02:34 -> 0:02:37] SPEAKER_00: Anything you want, that's a peassar of ... Cut the flight audio.It was just to be able to test later.
+
+[0:02:37 -> 0:02:40] Speaker_00: Cut the flight audio.It was just to be able to test later.
+
+[0:02:41 -> 0:02:43] Speaker_01: I close the footsteps again, that's it.
+
+[0:02:44 -> 0:02:45] SPEAKER_01: Are you doing something there?Studying?
+
+[0:02:47 -> 0:02:48] SPEAKER_01: No, I slept too.
+
+[0:02:49 -> 0:02:50] SPEAKER_01: Ah, so it's Nice.I think I'm going to rest today, tomorrow, the study.
+
+[0:02:56 -> 0:02:56] Speaker_01: I go from before.
+
+[0:02:56 -> 0:02:57] SPEAKER_01: I go from before.Thanks, Piá, Nois.
+
+[0:02:57 -> 0:02:58] Speaker_01: Thanks, Piá, Nois.

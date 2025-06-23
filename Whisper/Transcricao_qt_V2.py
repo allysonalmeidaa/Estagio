@@ -2,14 +2,14 @@ import sys
 import os
 import json
 from datetime import datetime
-from PyQt5.QtWidgets import (
+from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QPushButton,
     QFileDialog, QVBoxLayout, QHBoxLayout, QTextEdit, QComboBox, QMessageBox, QProgressBar,
     QListWidget, QLineEdit
 )
-from PyQt5.QtGui import QIntValidator, QIcon
-from PyQt5.QtCore import QThread, pyqtSignal, Qt
-from Transcricao_core import transcrever_com_diarizacao
+from PyQt6.QtGui import QIntValidator, QIcon
+from PyQt6.QtCore import QThread, pyqtSignal, Qt
+from Transcricao_core_V2 import transcrever_com_diarizacao
 
 PASTA_SCRIPT = os.path.dirname(os.path.abspath(__file__))
 HISTORICO_PATH = os.path.join(PASTA_SCRIPT, "historico.json")
@@ -32,7 +32,7 @@ class DropWidget(QWidget):
 
         # Centralização horizontal e vertical do texto dentro da área cinza
         self.label = QLabel("Arraste e solte um arquivo de áudio ou vídeo aqui")
-        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -138,7 +138,7 @@ class TranscricaoApp(QMainWindow):
 
         # Top bar estilo abas
         self.btn_config = QPushButton("Configurações")
-        self.btn_config.setCursor(Qt.PointingHandCursor)
+        self.btn_config.setCursor(Qt.CursorShape.PointingHandCursor)
         self.btn_config.setFlat(True)
         self.btn_config.setStyleSheet("""
             QPushButton {
@@ -155,7 +155,7 @@ class TranscricaoApp(QMainWindow):
         self.btn_config.clicked.connect(self.abrir_configuracoes)
 
         self.btn_sobre = QPushButton("Sobre")
-        self.btn_sobre.setCursor(Qt.PointingHandCursor)
+        self.btn_sobre.setCursor(Qt.CursorShape.PointingHandCursor)
         self.btn_sobre.setFlat(True)
         self.btn_sobre.setStyleSheet("""
             QPushButton {
@@ -228,7 +228,7 @@ class TranscricaoApp(QMainWindow):
 
         # Status centralizado
         self.label_status = QLabel("Aguardando para começar.")
-        self.label_status.setAlignment(Qt.AlignCenter)
+        self.label_status.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_status.setFixedHeight(18)
         layout_esquerda.addWidget(self.label_status)
         layout_esquerda.addSpacing(8)
@@ -314,7 +314,7 @@ class TranscricaoApp(QMainWindow):
 
     def abrir_configuracoes(self):
         self.conf_dialog = ConfigDialog(self.config, self.salvar_config)
-        self.conf_dialog.setWindowModality(Qt.ApplicationModal)
+        self.conf_dialog.setWindowModality(Qt.WindowModality.ApplicationModal)
         self.conf_dialog.show()
 
     def mostrar_sobre(self):
@@ -327,11 +327,11 @@ class TranscricaoApp(QMainWindow):
         """
         msg = QMessageBox(self)
         msg.setWindowTitle("Sobre")
-        msg.setTextFormat(Qt.RichText)
+        msg.setTextFormat(Qt.TextFormat.RichText)
         msg.setText(texto)
-        msg.setStandardButtons(QMessageBox.Ok)
-        msg.setTextInteractionFlags(Qt.TextBrowserInteraction)
-        msg.exec_()
+        msg.setStandardButtons(QMessageBox.StandardButton.Ok)
+        msg.setTextInteractionFlags(Qt.TextInteractionFlag.TextBrowserInteraction)
+        msg.exec()
 
     def selecionar_arquivo(self):
         fname, _ = QFileDialog.getOpenFileName(
@@ -475,7 +475,7 @@ class TranscricaoApp(QMainWindow):
 
     def limpar_historico(self):
         resp = QMessageBox.question(self, "Limpar histórico", "Tem certeza que deseja apagar todo o histórico?")
-        if resp == QMessageBox.Yes:
+        if resp == QMessageBox.StandardButton.Yes:
             self._historico_cache = []
             if os.path.exists(HISTORICO_PATH):
                 os.remove(HISTORICO_PATH)
@@ -485,4 +485,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TranscricaoApp()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

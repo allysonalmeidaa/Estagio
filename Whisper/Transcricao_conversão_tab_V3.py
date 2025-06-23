@@ -1,9 +1,9 @@
 import os
-from PyQt5.QtWidgets import (
+from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QTextEdit, QFileDialog, QCheckBox, QMessageBox
 )
-from PyQt5.QtCore import Qt
+from PyQt6.QtCore import Qt
 # Importe corretamente seu script onde está a função processar_video
 from Processamento_video import processar_video  # Altere para o nome do seu arquivo de conversão
 

@@ -1,0 +1,287 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+}
+
+/* Header: Título e Sobre */
+.header-bar {
+    background: #2460a8;
+    color: #fff;
+    padding: 0.7em 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sobre pequeno e à direita */
+.sobre-btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 4px 17px;
+    border-radius: 7px;
+    background: transparent;
+    transition: background 0.12s;
+    border: none;
+    outline: none;
+    display: inline-block;
+}
+
+.sobre-btn.active, .sobre-btn:focus, .sobre-btn:hover {
+    background: #205690;
+    cursor: pointer;
+}
+
+/* Barra de menu secundária */
+.menu-bar {
+    background: #e3ecf7;
+    border-bottom: 1px solid #d8e2ee;
+    display: flex;
+    align-items: center;
+    min-height: 51px;
+    padding: 0;
+}
+
+.menu-center {
+    display: flex;
+    gap: 1.2em;
+    margin-left: 2em;
+    align-items: center;
+    height: 51px;
+}
+
+/* Abas Transcrição e Conversão */
+.menu-btn {
+    color: #205690;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.12em;
+    padding: 9px 32px 9px 32px;
+    border-radius: 7px 7px 0 0;
+    border: none;
+    outline: none;
+    display: inline-block;
+    transition: background 0.14s, color 0.14s;
+}
+
+.menu-btn.active, .menu-btn:focus {
+    background: #c6dbf6;
+    color: #205690;
+}
+
+.menu-btn:hover {
+    background: #2460a8;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Caixa central do site */
+.central-box {
+    max-width: 700px;
+    margin: 40px auto 32px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(36,96,168,0.07);
+    padding: 36px 28px;
+    text-align: center;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 3em 0 1em 0;
+}
+
+/* Botões grandes da home */
+.big-btn {
+    padding: 2.1em 2.6em;
+    font-size: 1.55em;
+    background: #2460a8;
+    color: #fff !important;
+    border: none;
+    border-radius: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+    box-shadow: 0 2px 12px rgba(36,96,168,0.11);
+    cursor: pointer;
+    transition: background 0.14s, color 0.14s;
+    display: inline-block;
+    outline: none;
+}
+
+.big-btn:hover, .big-btn:focus {
+    background: #205690;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.big-btn, .big-btn:visited, .big-btn:active {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+/* Botões de download/transcrição */
+.download-link {
+    padding: 0.85em 2.2em;
+    border-radius: 18px;
+    background: #2460a8;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 1.18em;
+    transition: background 0.14s, color 0.14s;
+    display: inline-block;
+    margin: 0.4em 0.5em;
+}
+
+.download-link:hover, .download-link:focus {
+    background: #205690;
+    color: #fff !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.form-box {
+    background: #f8faff;
+    padding: 1.2em 2em 1.6em 2em;
+    border-radius: 10px;
+    border: 1px solid #d8e2ee;
+    margin: 2em auto 2em auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: center;
+}
+
+.linha-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box label {
+    font-size: 1em;
+}
+
+input[type="file"], input[type="text"], select {
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    border-radius: 4px;
+    border: 1px solid #b9d0e7;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    outline: none;
+}
+
+input[type="file"]:hover, input[type="text"]:hover, select:hover {
+    cursor: pointer;
+}
+
+.btn-acao {
+    padding: 0.45em 1.5em;
+    border-radius: 6px;
+    border: none;
+    background: #2460a8;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+.btn-acao:hover {
+    background: #205690;
+    cursor: pointer;
+}
+
+.transcricao-box {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #d8e2ee;
+    margin: 1.5em auto 2em auto;
+    max-width: 650px;
+    min-height: 180px;
+    padding: 18px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1.09em;
+    text-align: left;
+}
+
+.downloads-box {
+    margin: 24px 0 0 0;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.erro {
+    color: #b30000;
+    margin: 1.2em 0;
+    font-weight: 500;
+}
+
+/* Sobre */
+.central-box a,
+.central-box a:visited {
+    color: #82b6db;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.central-box a:hover {
+    cursor: pointer;
+}
+
+/* Ajuste do box do sobre */
+.central-box.sobre-box {
+    max-width: 340px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+    .header-bar, .menu-bar {
+        flex-direction: column;
+        gap: 0.5em;
+        padding-left: 0.7em;
+        align-items: flex-start;
+    }
+    .central-box,
+    .form-box {
+        max-width: 97vw;
+        padding: 7vw 2vw;
+    }
+    .home-buttons {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .menu-center {
+        margin-left: 0;
+    }
+}

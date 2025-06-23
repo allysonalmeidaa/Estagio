@@ -1,0 +1,44 @@
+[0:00:04 -> 0:00:06] SPEAKER_00: So, Alvaro, thank you for your help, man. I needed to do this little meeting there,
+
+[0:00:27 -> 0:00:29] SPEAKER_00: I don't know, maybe a few minutes, at least, to do the test there, from IACA, I'm using through Python,
+
+[0:00:30 -> 0:00:32] SPEAKER_00: that the main name passed through the IACA, that you can use through Python, you know?
+
+[0:00:43 -> 0:00:47] SPEAKER_00: Then you, like, it will work without any problem, as if it were a library, you install it, it is a library,  actually, from Python too, and then it works as you can put audio there, an MP3 file, for example,
+
+[0:00:47 -> 0:00:49] SPEAKER_00: actually, from Python too, and then it works as you can put audio there, an MP3 file, for example,
+
+[0:01:00 -> 0:01:02] SPEAKER_00: you can put a video file, like, for example, this is the screen recording, it will generate a video file, right?
+
+[0:01:02 -> 0:01:10] SPEAKER_00: Then an MP4, for example, then there are those files, another audio that I recorded by a microphone on the computer,  which is the M4A, and there are other formats, then it can, like, you put your audio there and it transcribes what is in the audio,
+
+[0:01:20 -> 0:01:33] SPEAKER_00: besides it transcribing what is in the audio, it can also, like, depending on the side you put in the code,  it can detect what is the language that is being spoken in that audio, and then another thing is that it can
+
+[0:01:34 -> 0:01:38] SPEAKER_00: it can detect what is the language that is being spoken in that audio, and then another thing is that it can  for example, we are here speaking in Portuguese, I can transcribe there and I can also ask it to translate it to English, for example,
+
+[0:01:48 -> 0:01:52] SPEAKER_00: for example, we are here speaking in Portuguese, I can transcribe there and I can also ask it to translate it to English, for example,  it is another thing that it can also do, so it's just more to test, because I tested with the MP3 audio until now,
+
+[0:01:53 -> 0:01:57] SPEAKER_00: it is another thing that it can also do, so it's just more to test, because I tested with the MP3 audio until now,  and I didn't test with the video.
+
+[0:02:25 -> 0:02:26] SPEAKER_01: But I think I already gave the wave, dude, that I'll...
+
+[0:02:30 -> 0:02:34] SPEAKER_01: Any time you answer, you will lose.
+
+[0:02:34 -> 0:02:37] SPEAKER_00: Cut the audio, that's cool. It's just to test myself later.
+
+[0:02:37 -> 0:02:40] SPEAKER_00: Cut the audio, that's cool. It's just to test myself later.  Let me try again.
+
+[0:02:41 -> 0:02:43] SPEAKER_01: Let me try again.  Are you doing something there? Studying?
+
+[0:02:44 -> 0:02:45] SPEAKER_01: Are you doing something there? Studying?
+
+[0:02:47 -> 0:02:48] SPEAKER_01: No, I'm sleeping.
+
+[0:02:49 -> 0:02:50] SPEAKER_01: So it's cool. And I think I'm going to rest today, tomorrow I study.
+
+[0:02:56 -> 0:02:56] SPEAKER_01: I'll go first.
+
+[0:02:56 -> 0:02:57] SPEAKER_01: I'll go first.
+
+[0:02:57 -> 0:02:58] SPEAKER_01: Thanks, Pia, bye.
+

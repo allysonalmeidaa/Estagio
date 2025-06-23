@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Processador de Áudio e Vídeo{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header: Título à esquerda, Sobre à direita -->
+    <header class="header-bar">
+        <a href="{{ url_for('home') }}" class="logo-link">
+            <span class="logo">Processador de Áudio e Vídeo</span>
+        </a>
+        <a href="{{ url_for('sobre') }}" class="sobre-btn {% if request.endpoint == 'sobre' %}active{% endif %}">Sobre</a>
+    </header>
+    <!-- Menu: só aparece se NÃO estiver na home -->
+    {% if request.endpoint != 'home' %}
+    <nav class="menu-bar">
+        <div class="menu-center">
+            <a href="{{ url_for('transcricao') }}" class="menu-btn {% if request.endpoint == 'transcricao' %}active{% endif %}">Transcrição</a>
+            <a href="{{ url_for('conversao') }}" class="menu-btn {% if request.endpoint == 'conversao' %}active{% endif %}">Conversão</a>
+        </div>
+    </nav>
+    {% endif %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

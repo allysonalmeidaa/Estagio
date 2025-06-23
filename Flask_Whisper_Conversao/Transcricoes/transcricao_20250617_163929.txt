@@ -1,0 +1,74 @@
+[0:00:04 -> 0:00:06] SPEAKER_00: Pronto, a gravação foi iniciada.
+
+[0:00:07 -> 0:00:11] SPEAKER_00: Então, Álvaro, muito obrigado aí pela sua ajuda, cara.
+
+[0:00:12 -> 0:00:12] SPEAKER_00: Eu precisava fazer essa pequena reunião ali, tipo, de uns...
+
+[0:00:16 -> 0:00:27] SPEAKER_00: Eu precisava fazer essa pequena reunião ali, tipo, de uns...  Se ela nos minutinhos, dois minutos, pelo menos, para fazer o teste lá da IACA,  eu estou usando através do Python, que o Menom me passou uma IACA,
+
+[0:00:27 -> 0:00:29] SPEAKER_00: eu estou usando através do Python, que o Menom me passou uma IACA,
+
+[0:00:33 -> 0:00:36] SPEAKER_00: que você consegue utilizar através do Python, tá ligado?
+
+[0:00:37 -> 0:00:38] SPEAKER_00: Aí você, tipo, ela vai funcionar, sem importa como se ela fosse uma biblioteca,
+
+[0:00:43 -> 0:00:47] SPEAKER_00: Aí você, tipo, ela vai funcionar, sem importa como se ela fosse uma biblioteca,  se instala ela é uma biblioteca, na verdade, do Python também,  e daí ela funciona como. Você consegue colocar áudio lá, um arquivo MP3, por exemplo,
+
+[0:00:47 -> 0:00:49] SPEAKER_00: e daí ela funciona como. Você consegue colocar áudio lá, um arquivo MP3, por exemplo,
+
+[0:00:49 -> 0:01:00] SPEAKER_00: e daí ela funciona como. Você consegue colocar áudio lá, um arquivo MP3, por exemplo,  que você consegue colocar um arquivo de vídeo, que, por exemplo,  essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?
+
+[0:01:00 -> 0:01:02] SPEAKER_00: essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?
+
+[0:01:02 -> 0:01:10] SPEAKER_00: essa aqui é a gravação de tela, ela vai gerar um arquivo de vídeo, né?  Aí um MP4, por exemplo, daí tem aqueles arquivos, um outro J, de que eu gravei  pelo microfone no computador que é o M4A, e tem outros formatos.
+
+[0:01:12 -> 0:01:13] SPEAKER_00: pelo microfone no computador que é o M4A, e tem outros formatos.
+
+[0:01:13 -> 0:01:19] SPEAKER_00: pelo microfone no computador que é o M4A, e tem outros formatos.  Aí ela consegue, tipo, ou seja, de colocar até o áudio lá,  e ela transcreve o que está no áudio. Além dela transcrever o que está no áudio,
+
+[0:01:20 -> 0:01:33] SPEAKER_00: e ela transcreve o que está no áudio. Além dela transcrever o que está no áudio,  ela consegue também, tipo, dependendo lá do que você coloca no código,  ela consegue detectar qual é o idioma que está sendo falado naquele áudio.
+
+[0:01:34 -> 0:01:38] SPEAKER_00: E daí, outra coisa também é que ela pode, por exemplo, a gente está aqui falando em português.
+
+[0:01:39 -> 0:01:48] SPEAKER_00: E daí, outra coisa também é que ela pode, por exemplo, a gente está aqui falando em português.  Eu posso lá transcrever e também posso pedir para ele traduzir para inglês, por exemplo.
+
+[0:01:48 -> 0:01:52] SPEAKER_00: Eu posso lá transcrever e também posso pedir para ele traduzir para inglês, por exemplo.  E outra coisa que ela também pode fazer. Então, é só mais para testar que eu testei com áudios
+
+[0:01:53 -> 0:01:57] SPEAKER_00: E outra coisa que ela também pode fazer. Então, é só mais para testar que eu testei com áudios  MP3 até o momento, e não testei com o vídeo.
+
+[0:01:58 -> 0:01:59] SPEAKER_00: MP3 até o momento, e não testei com o vídeo.
+
+[0:02:02 -> 0:02:04] SPEAKER_01: É que ela vai ver se esse vídeo está no dia.  Aí não, né cara? Vamos estar com o menor, você fala isso, daí, mano?
+
+[0:02:05 -> 0:02:09] SPEAKER_00: Aí não, né cara? Vamos estar com o menor, você fala isso, daí, mano?  Eu vou...
+
+[0:02:10 -> 0:02:13] SPEAKER_01: Eu vou...  Eu vou...
+
+[0:02:15 -> 0:02:17] SPEAKER_01: Eu vou para ele ver que está tudo, não?
+
+[0:02:18 -> 0:02:18] SPEAKER_01: Ah, escreve que por mês está muito diante, ó.
+
+[0:02:25 -> 0:02:26] SPEAKER_01: Ah, ah...
+
+[0:02:27 -> 0:02:29] SPEAKER_01: Mas acho que tinha Deus de Alvo, a Goliquia devol...
+
+[0:02:30 -> 0:02:34] SPEAKER_01: Qualquer coisa que você conhece, qual que você conhece, qual é o seu espanhol de...
+
+[0:02:34 -> 0:02:37] SPEAKER_00: Qualquer coisa que você conhece, qual que você conhece, qual é o seu espanhol de...  Ah, corta, Alvo, devol...
+
+[0:02:37 -> 0:02:40] SPEAKER_00: Ah, corta, Alvo, devol...  Era só para poder... para me poder testar depois.
+
+[0:02:41 -> 0:02:43] SPEAKER_01: Peixou as pessoas, eles de novo, ver isso.
+
+[0:02:44 -> 0:02:45] SPEAKER_01: Estava fazendo alguma coisa aí? Estudando?
+
+[0:02:47 -> 0:02:48] SPEAKER_01: Não, eu dormi, então, olha.
+
+[0:02:49 -> 0:02:50] SPEAKER_01: Ah, então está né, esse.
+
+[0:02:51 -> 0:02:54] SPEAKER_01: Eu acho que eu também vou descansar hoje, amanhã, ao estudo.
+
+[0:02:56 -> 0:02:56] SPEAKER_01: Eu vou...
+
+[0:02:57 -> 0:02:58] SPEAKER_01: Eu vou...  Valeu, piai, não é isso.
+

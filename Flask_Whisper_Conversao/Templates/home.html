@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Página Inicial | Processador de Áudio e Vídeo{% endblock %}
+{% block content %}
+<div class="central-box">
+    <h1 style="font-size:2.1em; margin-bottom:1.6em;">Bem-vindo ao Processador de Áudio e Vídeo</h1>
+    <div class="home-buttons">
+        <a href="{{ url_for('transcricao') }}" class="big-btn">Transcrição de Áudio/Vídeo</a>
+        <a href="{{ url_for('conversao') }}" class="big-btn">Conversão de Arquivos</a>
+    </div>
+</div>
+{% endblock %}
